@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A compatibility-based \"FriendFinder\" application -- basically a dating app. This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app then displays the name and picture of the user with the best overall match.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacqueWhite/FriendFinder.git"
+  },
+  "author": "Jacqueline White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacqueWhite/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/JacqueWhite/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}
