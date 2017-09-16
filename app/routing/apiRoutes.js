@@ -1,16 +1,12 @@
-// See all Friends - provides JSON
-app.get("/api/friends", function(req, res) {
-        return res.json(friends);
-  }
+var friends = require('../data/friends.js');
+// console.log(dogs);
+var path = require('path');
+// console.log(path);
 
-// Create New Characters - takes in JSON input
-app.post("/api/new", function(req, res) {
-  var newFriend = req.body;
-  newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+// routing 
+module.exports = function(app) {
+    // API GET Requests 
+    app.get('/api/friends', function(req, res) {
+        res.json(friends);
+    });
 
-  console.log(newFriend);
-
-  friends.push(newFriend);
-
-  res.json(newFriend);
-});

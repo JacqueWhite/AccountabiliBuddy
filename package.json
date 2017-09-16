@@ -2,8 +2,9 @@
   "name": "friendfinder",
   "version": "1.0.0",
   "description": "A compatibility-based \"FriendFinder\" application -- basically a dating app. This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app then displays the name and picture of the user with the best overall match.",
-  "main": "server.js",
+  "main": "apiRoutes.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
