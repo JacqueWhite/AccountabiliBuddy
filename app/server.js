@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // parse everything we need for the html
-app.use(express.static("app/public"));
+app.use(express.static("./app/public"));
 
 app.use(bodyParser.text());
 app.use(bodyParser.json({ 
@@ -24,8 +24,8 @@ app.use(bodyParser.json({
 }));
 
 // the main client pages
-require("app/routing/htmlRoutes.js")(app);
-require("app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
