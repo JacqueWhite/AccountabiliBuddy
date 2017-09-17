@@ -1,3 +1,4 @@
+"use strict";
 // Dependencies
 // =============================================================
 var express = require("express");
@@ -16,16 +17,24 @@ app.use(bodyParser.urlencoded({
 }));
 
 // parse everything we need for the html
-app.use(express.static("./app/public"));
+app.use(express.static(__dirname + "/app/public"));
 
 app.use(bodyParser.text());
 app.use(bodyParser.json({ 
-	type: "application/vnd.api.json" 
+	type: "application/vnd.api+json" 
 }));
 
 // the main client pages
-require("./app/routing/htmlRoutes.js")(app);
-require("./app/routing/apiRoutes.js")(app);
+var htmlRoutes = require("./app/routing/htmlRoutes.js");
+var apiRoutes = require("./app/routing/apiRoutes.js");
+
+//get requests
+app.use('/', htmlRoutes.home);
+app.use('/', htmlRoutes.survey);
+
+// get/post requests
+app.use('/', apiRoutes.getFriends);
+app.use('/', apiRoutes.postFriends);
 
 // Starts the server to begin listening
 // =============================================================

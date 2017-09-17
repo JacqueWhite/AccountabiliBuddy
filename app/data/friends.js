@@ -1,4 +1,4 @@
-var friends = [
+exports.friends = [
 	{
 		"name": "Ricky Bobby",
 		"photo": "https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/18765561_10154806666071871_2452798636540453276_n.jpg?oh=6cae5a1a7955148122810b52683ec89d&oe=5A187AB0",
@@ -34,5 +34,3 @@ var friends = [
 		]
 	}
 ]
-
-module.exports = friends;
