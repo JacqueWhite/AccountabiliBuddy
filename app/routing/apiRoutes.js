@@ -1,5 +1,5 @@
 var friends = require('../data/friends.js');
-// console.log(dogs);
+// console.log(friends);
 var path = require('path');
 // console.log(path);
 
