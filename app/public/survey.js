@@ -1,6 +1,7 @@
 $(document).ready(function() {
+	$('.modal').modal();
     // Capture the form inputs 
-    $("#submit").on("click", function(){
+    $(document).on('click', '#submit', function() {
     	// Form validation
     	function validateForm() {
 		  var isValid = true;
@@ -47,12 +48,12 @@ $(document).ready(function() {
 				$('#matchImg').attr("src", bestMatch.photo);
 
 				// display the modal
-				$('#resultsModal').modal('toggle');
+				$('#resultsModal').modal('open');
 			});
 		}
 		else {
 			// if validateForm() returns false (i.e., there is a field/question that was not answered), display the error modal
-			$("#errorModal").modal('toggle');
+			$("#errorModal").modal('open');
 		}
 	});
 });

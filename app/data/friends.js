@@ -32,5 +32,39 @@ exports.friends = [
 			"1",
 			"3"
 		]
+	},
+	{
+		"name": "Spencer White",
+		"photo": "https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/17554394_10212154709007558_186898320700595334_n.jpg?oh=5d6e6b509187dd4ceb2fa309e36fac08&oe=5A411B98",
+		"scores": 
+		[
+			"5",
+			"5",
+			"5",
+			"5",
+			"4",
+			"3",
+			"2",
+			"5",
+			"2",
+			"3"
+		]
+	},
+	{
+		"name": "Cory Tolar",
+		"photo": "https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/10430880_10152628898648825_672240973743378046_n.jpg?oh=df17720452db0441b3c34940af4de292&oe=5A4F1257",
+		"scores": 
+		[
+			"3",
+			"4",
+			"5",
+			"5",
+			"5",
+			"5",
+			"1",
+			"2",
+			"1",
+			"5"
+		]
 	}
 ]
