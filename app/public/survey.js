@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('.modal').modal();
     // Capture the form inputs 
     $(document).on('click', '#submit', function() {
     	// Form validation
@@ -45,7 +44,7 @@ $(document).ready(function() {
 			$.post(window.location.origin + "/api/friends", newUser).done(function(bestMatch) {
 				// display the best match's name and picture in the modal
 				$('#matchName').text(bestMatch.name);
-				$('#matchImg').attr("src", bestMatch.photo);
+				$('#matchImg').attr("src", bestMatch.photo).addClass("responsive-img");
 
 				// display the modal
 				$('#resultsModal').modal('open');
