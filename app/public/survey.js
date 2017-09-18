@@ -48,6 +48,11 @@ $(document).ready(function() {
 
 				// display the modal
 				$('#resultsModal').modal('open');
+				clearSurvey();
+
+				$("#whatNext").on('click', function() {
+					$("#nextModal").modal('open');
+				})
 			});
 		}
 		else {
@@ -55,4 +60,20 @@ $(document).ready(function() {
 			$("#errorModal").modal('open');
 		}
 	});
+
+		function clearSurvey(){
+		$('#name').val('');
+		$('#photo').val('');
+		$('#q1').val('');
+		$('#q2').val('');
+		$('#q3').val('');
+		$('#q4').val('');
+		$('#q5').val('');
+		$('#q6').val('');
+		$('#q7').val('');
+		$('#q8').val('');
+		$('#q9').val('');
+		$('#q10').val('');
+		};		
+
 });
