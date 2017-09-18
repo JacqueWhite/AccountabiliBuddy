@@ -33,9 +33,40 @@ $(document).ready(function() {
 					parseInt($('#q10').val().trim())
 				];
 			// new user's information
+
+		var upload_file = function(path,file_field) {
+		    var file = file_field[0].files[0];
+		    var fd = new FormData();
+		    fd.append('key', file.name);
+		    fd.append('acl', 'bucket-owner-full-control');
+		    fd.append('Content-Type', file.type);
+		    fd.append("file",file);
+
+
+		    return $.ajax({
+		        type : 'POST',
+		        url : path,
+		        data : fd,
+		        processData: false,  // Don't process the data
+		        contentType: false,  // Don't set contentType
+		        success: function(json) { console.log('Upload complete!') },
+		        error: function (XMLHttpRequest, textStatus, errorThrown) {
+		            console.log('Upload error: ' + XMLHttpRequest.responseText);
+		        }
+		    });
+		};
+
+		$( '#s3-form' ).submit(function( event ) {
+		    event.preventDefault();
+		    var file_field = $('form').children('input[type=file]')
+		    upload_file('https://s3.us-east-2.amazonaws.com/accountabilibuddy.com/',
+		                file_field);
+		}
+
+			var file_field = $('#photo');
 			var newUser = {
 				name: $('#name').val().trim(), // grab the user's name
-				photo: $('#photo').val().trim(), // grab the user's picture
+				photo: 'https://s3.us-east-2.amazonaws.com/accountabilibuddy.com/' + file_field, // grab the user's picture
 				scores: scoresArr
 			};
 
