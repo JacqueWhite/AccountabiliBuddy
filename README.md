@@ -1,4 +1,4 @@
-# FriendFinder
-A compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app then displays the name and picture of the user with the best overall match.
+# AccountabiliBuddy
+A gym-buddy match app that pairs up friends based on schedule and fitness activity preferences.
 
-- __[see it live here](https://young-citadel-70356.herokuapp.com/)__
+[see it live here](https://accountabili-buddy.herokuapp.com/)
